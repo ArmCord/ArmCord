@@ -35,12 +35,12 @@ jobs:
         run: npm run build && electron-builder --linux zip && electron-builder --arm64 --linux zip
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ArmCordLinux.zip
           path: dist/ArmCord-3.3.0.zip
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ArmCordLinuxArm64.zip
           path: dist/ArmCord-3.3.0-arm64.zip
@@ -105,7 +105,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ArmCordMac.zip
           path: dist/ArmCord-3.3.0-mac.zip
@@ -137,7 +137,7 @@ jobs:
         run: npm run build && electron-builder --windows zip
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ArmCordWindows.zip
           path: dist/ArmCord-3.3.0-win.zip
@@ -170,7 +170,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ArmCordWindowsArm64.zip
           path: dist\ArmCord-3.3.0-arm64-win.zip

@@ -38,7 +38,7 @@ jobs:
             - name: Delete unpacked builds
               run: rm -rf dist/linux-unpacked && rm -rf dist/linux-arm64-unpacked && rm -rf dist/linux-armv7l-unpacked
             - name: Upload artifact
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: ArmCordLinux
                   path: dist/
@@ -75,7 +75,7 @@ jobs:
               run: rm -rf dist/macos-unpacked
 
             - name: Upload artifact
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: ArmCordMac
                   path: dist/
@@ -107,7 +107,7 @@ jobs:
             - name: Delete unpacked builds
               run: Remove-Item -LiteralPath ".\dist\win-unpacked" -Force -Recurse
             - name: Upload artifact
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: ArmCordWindows
                   path: dist/
@@ -139,7 +139,7 @@ jobs:
             - name: Delete unpacked builds
               run: Remove-Item -LiteralPath ".\dist\win-arm64-unpacked" -Force -Recurse
             - name: Upload artifact
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: ArmCordWindowsArm64
                   path: dist/
