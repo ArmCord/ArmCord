@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>app.armcord.ArmCord</id>
+  <name>ArmCord</name>
+  <summary>A custom Discord client designed to enhance your experience while keeping everything lightweight</summary>
+  <developer_name>ArmCord Contributors</developer_name>
+  <launchable type="desktop-id">app.armcord.ArmCord.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>OSL-3.0</project_license>
+  <update_contact>support@armcord.xyz</update_contact>
+  <project_group>ArmCord</project_group>
+  <description>
+    <p>ArmCord is a custom client designed to enhance your Discord experience while keeping everything lightweight.</p>
+    <ol>
+      <li>Standalone Client - ArmCord is build as a standalone client and doesn't rely on the original Discord client in any way.</li>
+      <li>Various Mods Build In - Enjoy Vencord, Shelter and their many features, or have a more vanilla experience, it's your choice!</li>
+      <li>Made for Privacy - ArmCord automatically blocks all of Discord's trackers; even without any client mods you can feel safe and secure!</li>
+      <li>Supports Rich Presence - Unlike other clients ArmCord supports rich presence (game activity) out of the box thanks to arRPC.</li>
+      <li>Mobile support - ArmCord has a experimental mobile support for phones running Linux such as the PinePhone. While this is still far from ideal solution, we're slowly trying to improve it.</li>
+      <li>Much more stable - ArmCord is using a newer build of Electron than the stock Discord app. This means you can have a much more stable and secure experience, along with slightly better performance.</li>
+      <li>Cross-platform support - ArmCord was originally created for ARM64 Linux devices, since Discord doesn't support them. We soon decided to support every platform that Electron supports!</li>
+    </ol>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <caption>ArmCord at the Discord login screen, on a themed GNOME 43 on Fedora 37</caption>
+      <image type="source" width="1920" height="1080">https://raw.githubusercontent.com/ArmCord/ArmCord/2771acb68cfe9209e48d96807840c03bbbd13c24/assets/screenshot-1920x1080.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="3.2.1" date="2023-07-18"/>
+    <release version="3.2.0" date="2023-05-14"/>
+    <release version="3.1.7" date="2023-03-14"/>
+    <release version="3.1.6" date="2023-02-26"/>
+  </releases>
+  <url type="homepage">https://armcord.app</url>
+  <url type="bugtracker">https://github.com/ArmCord/ArmCord/issues</url>
+  <url type="faq">https://www.armcord.app/faq</url>
+  <url type="help">https://github.com/ArmCord/ArmCord/issues</url>
+  <url type="translate">https://hosted.weblate.org/projects/armcord/armcord/</url>
+  <url type="vcs-browser">https://github.com/ArmCord/ArmCord</url>
+  <categories>
+    <category>InstantMessaging</category>
+    <category>AudioVideo</category>
+    <category>Security</category>
+  </categories>
+  <requires>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <display_length compare="ge">small</display_length>
+    <internet>always</internet>
+  </requires>
+  <recommends>
+    <control>voice</control>
+    <display_length compare="ge">medium</display_length>
+    <display_length compare="le">xlarge</display_length>
+    <internet>always</internet>
+  </recommends>
+  <supports>
+    <internet>always</internet>
+  </supports>
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-chat">intense</content_attribute>
+    <content_attribute id="social-audio">intense</content_attribute>
+    <content_attribute id="social-contacts">intense</content_attribute>
+    <content_attribute id="social-info">intense</content_attribute>
+  </content_rating>
+  <keywords>
+    <keyword>Discord</keyword>
+    <keyword>ArmCord</keyword>
+    <keyword>Privacy</keyword>
+    <keyword>Mod</keyword>
+  </keywords>
+</component>
