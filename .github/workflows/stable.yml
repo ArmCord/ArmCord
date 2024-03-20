@@ -148,19 +148,19 @@ jobs:
         needs: [build-linux, build-mac, build-windows, build-windowsOnARM]
 
         steps:
-            - uses: actions/download-artifact@v2
+            - uses: actions/download-artifact@v3
               with:
                   name: ArmCordMac
                   path: macos
-            - uses: actions/download-artifact@v2
+            - uses: actions/download-artifact@v3
               with:
                   name: ArmCordWindows
                   path: windows
-            - uses: actions/download-artifact@v2
+            - uses: actions/download-artifact@v3
               with:
                   name: ArmCordWindowsArm64
                   path: windows
-            - uses: actions/download-artifact@v2
+            - uses: actions/download-artifact@v3
               with:
                   name: ArmCordLinux
                   path: linux

@@ -182,26 +182,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: ArmCordMac.zip
           path: macos
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: ArmCordWindows.zip
           path: windows
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: ArmCordLinux.zip
           path: linux
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: ArmCordLinuxArm64.zip
           path: linux
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: ArmCordWindowsArm64.zip
           path: windows
