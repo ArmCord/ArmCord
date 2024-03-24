@@ -179,7 +179,7 @@ jobs:
                 echo "::set-output name=releaseTag::$(git describe --tags --abbrev=0)"
 
             - name: Create Release
-              uses: actions/github-script@v2
+              uses: actions/github-script@v6
               with:
                 github-token: ${{secrets.GITHUB_TOKEN}}
                 script: |
