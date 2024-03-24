@@ -13,7 +13,7 @@ jobs:
 
         steps:
             - name: Checkout code
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
 
             - uses: pnpm/action-setup@v2 # Install pnpm using packageManager key in package.json
 
@@ -49,7 +49,7 @@ jobs:
 
         steps:
             - name: Checkout code
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
 
             - uses: pnpm/action-setup@v2 # Install pnpm using packageManager key in package.json
 
@@ -84,7 +84,7 @@ jobs:
         runs-on: windows-latest
         steps:
             - name: Checkout code
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
 
             - uses: pnpm/action-setup@v2 # Install pnpm using packageManager key in package.json
 
@@ -119,7 +119,7 @@ jobs:
                 node-version: '18'
 
             - name: Checkout code
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
 
             - name: Set architecture
               run: set npm_config_arch=arm64

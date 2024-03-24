@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - uses: pnpm/action-setup@v2 # Install pnpm using packageManager key in package.json
 
@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - uses: pnpm/action-setup@v2 # Install pnpm using packageManager key in package.json
 
@@ -80,7 +80,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - uses: pnpm/action-setup@v2 # Install pnpm using packageManager key in package.json
 
@@ -114,7 +114,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - uses: pnpm/action-setup@v2 # Install pnpm using packageManager key in package.json
 
@@ -149,7 +149,7 @@ jobs:
           node-version: '18'
 
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set architecture
         run: set npm_config_arch=arm64
@@ -180,7 +180,7 @@ jobs:
     needs: [build-linux, build-mac, build-windows, build-windowsOnARM]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - uses: actions/download-artifact@v2
         with:
