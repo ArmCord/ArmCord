@@ -1,0 +1,47 @@
+name: macOS signed build
+on: 
+  push:
+    branches:
+      - macOS-codesign
+
+env:
+  FORCE_COLOR: true
+
+jobs:
+    build-mac:
+        runs-on: macos-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - uses: pnpm/action-setup@v2 # Install pnpm using packageManager key in package.json
+
+            - name: Use Node.js 22
+              uses: actions/setup-node@v2
+              with:
+                  node-version: 22
+                  cache: "pnpm"
+
+            - name: Install Node dependencies
+              run: pnpm install
+
+            - name: Install Electron-Builder
+              run: pnpm install -g electron-builder
+
+            - name: Build
+              run: pnpm run build && electron-builder --macos --x64 --arm64
+              env:
+                GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                CSC_LINK: "https://armcord.app/Sign.p12"
+                CSC_KEY_PASSWORD: ${{ secrets.MACOS_SIGN_PASS }}
+            - name: List all files in the dist directory
+              run: ls -l dist
+            - name: Delete unpacked builds
+              run: rm -rf dist/macos-unpacked
+
+            - name: Upload artifact
+              uses: actions/upload-artifact@v2
+              with:
+                  name: ArmCordMac
+                  path: dist/
