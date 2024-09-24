@@ -9,7 +9,7 @@ env:
 
 jobs:
     build-mac:
-        runs-on: macos-13
+        runs-on: macos-14
 
         steps:
             - name: Checkout code
@@ -22,7 +22,8 @@ jobs:
               with:
                   node-version: 22
                   cache: "pnpm"
-
+            - name: Install newer version of OpenSSL
+              run: brew install openssl@3
             - name: Install Node dependencies
               run: pnpm install
 
