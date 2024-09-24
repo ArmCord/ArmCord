@@ -22,8 +22,8 @@ jobs:
               with:
                   node-version: 22
                   cache: "pnpm"
-            - name: Install newer version of OpenSSL
-              run: brew install openssl@3
+            - name: List version of OpenSSL
+              run: openssl version
             - name: Install Node dependencies
               run: pnpm install
 
