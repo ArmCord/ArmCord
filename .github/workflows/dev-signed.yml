@@ -29,13 +29,14 @@ jobs:
 
             - name: Install Electron-Builder
               run: pnpm install -g electron-builder
-
+            - uses: apple-actions/import-codesign-certs@v3
+              with: 
+                p12-file-base64: ${{ secrets.MACOS_SIGN_CERT }}
+                p12-password: ${{ secrets.MACOS_SIGN_PASS }}
             - name: Build
               run: pnpm run build && electron-builder --macos --x64 --arm64
               env:
                 GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                CSC_LINK: "https://armcord.app/Sign.p12"
-                CSC_KEY_PASSWORD: ${{ secrets.MACOS_SIGN_PASS }}
             - name: List all files in the dist directory
               run: ls -l dist
             - name: Delete unpacked builds
