@@ -44,6 +44,7 @@
         "@uwu/shelter-defs": "^1.4.1",
         "electron": "32.1.2",
         "electron-builder": "^25.0.5",
+        "electron-builder-notarize": "^1.5.2",
         "rollup": "^4.22.0",
         "rollup-plugin-copy": "^3.5.0",
         "rollup-plugin-esbuild": "^6.1.1",

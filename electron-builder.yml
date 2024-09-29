@@ -1,8 +1,11 @@
 appId: com.smartfridge.armcord
 productName: ArmCord
 artifactName: ArmCord-${version}-${os}-${arch}.${ext}
+afterSign: "electron-builder-notarize"
 mac:
     category: Network
+    hardenedRuntime: true
+    entitlements: "./node_modules/electron-builder-notarize/entitlements.mac.inherit.plist"
 
 nsis:
     oneClick: false
