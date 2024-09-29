@@ -34,6 +34,7 @@
     "homepage": "https://github.com/armcord/armcord#readme",
     "devDependencies": {
         "@biomejs/biome": "1.9.2",
+        "@electron/notarize": "^2.5.0",
         "@rollup/plugin-commonjs": "^26.0.1",
         "@rollup/plugin-esm-shim": "^0.1.7",
         "@rollup/plugin-json": "^6.1.0",
